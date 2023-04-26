@@ -5,11 +5,13 @@ import {BrowserRouter,Switch,Route} from "react-router-dom";
 import Caption from './Page/caption';
 import PdfMain from './Page/Pdf_main';
 import PdfDetail from "./Page/Pdf_detail";
+import Loginbtn from './components/Loginbtn';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter>      
+        <Loginbtn/>
       <div className='container'>
       <Sidebar />
           <Switch>

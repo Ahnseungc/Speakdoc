@@ -1,0 +1,9 @@
+.Login {
+    height: 5vh;
+    width: 100%;
+    background-color: blue;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+}

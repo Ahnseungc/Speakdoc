@@ -18,20 +18,7 @@
     padding: 0.5rem;
 }
 
-.sidebarListItem {
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-}
 
-.sidebarListItem.active,
-.sidebarListItem:hover {
-    background-color: rgb(212,209,235);
-}
 
-ul li{
-    list-style: none;
-    text-decoration: none;
-}
+
+

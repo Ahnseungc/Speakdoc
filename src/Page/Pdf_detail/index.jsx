@@ -12,8 +12,11 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 
 const Container = styled.div`
-    width: 300px;
-    height: 200px;
+    width: 280px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 
@@ -28,11 +31,11 @@ export default function PdfDetail() {
   }
 
        async function postData (data){
-        try{
-          const res = await axios.post("url",{
-            img : data
-          });
-          console.log(res)
+        console.log(data);
+        try{          
+          const res = await axios.post("/ocr",
+          {data : data});
+          console.log(res);
         }
         catch(error) {
           console.log(error);
@@ -40,27 +43,40 @@ export default function PdfDetail() {
        }
         const onCapture = () =>{
           console.log('onCapture');
+          
           html2canvas(document.getElementById('pdf_main')).then(canvas=>{
-          onSaveAs(canvas.toDataURL('image/png'), 'image-download.png')
-          postData(canvas.toDataURL('image/png'))
+          // onSaveAs(canvas.toDataURL('image/png'), 'image-download.png')
+          const imgBase64=canvas.toDataURL('image/png')
+          const decodimg=imgBase64.split(',')[1];
+          // let array = [];
+          // for(let i=0; i<decodimg.length; i++){
+          //   array.push(decodimg.charCodeAt(i));
+          // }
+          // const file = new Blob([new Uint8Array(array)], {type: 'image/png'});
+          // const fileName = 'canvas_img_' + new Date().getMilliseconds() + '.png';
+          // let formData = new FormData();
+          // console.log(file);
+          // formData.append('file', file, fileName);
+          // console.log(formData);
+          postData(decodimg);
             })
         
         }
 
-        const onSaveAs =(uri, filename)=>{
-          console.log('onSaveAs');
-          console.log('uri', uri);
-          var link = document.createElement('a');          
-          document.body.appendChild(link);
-          link.href =uri;
-          link.download = filename;
-          link.click();
-          document.body.removeChild(link);
-        }
+        // const onSaveAs =(uri, filename)=>{
+        //   console.log('onSaveAs');
+        //   console.log('uri', uri);
+        //   var link = document.createElement('a');          
+        //   document.body.appendChild(link);
+        //   link.href =uri;
+        //   link.download = filename;
+        //   link.click();
+        //   document.body.removeChild(link);
+        // }
 
   return (
         <Container>
-        <div id='pdf_main' className='pdf_main' style={{width: '300px', height: '200px', overflow: 'auto', display:"flex",
+        <div id='pdf_main' className='pdf_main' style={{width: '280px', height: '200px', overflow: 'auto', display:"flex",
         justifyContent: "center"
       }} >
       <Document
@@ -69,7 +85,7 @@ export default function PdfDetail() {
         >
         <Page 
         height={300}
-        width={200}
+        width={280}
         pageNumber={pageNumber} 
             renderTextLayer={false}
             onClick={onCapture}

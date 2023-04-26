@@ -1,13 +1,17 @@
-import React,{useEffect} from "react";
+import React,{useState} from 'react';
 import './sidebar.css'
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Sidebaritem from "../sidebarItem";
 
-export default function sidebar() {
+export default function sidebar({width=280}) {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const pathName = useLocation().pathname;
     console.log(pathName);
+
+    // const [isOpen, setOpen] = useState(false);
+    // const [xPosition, setX] = useState(-width);
+    // const side = useRef();
 
     const menus = [
         {name: "HOME", path: "/home"},
@@ -18,6 +22,7 @@ export default function sidebar() {
     return ( 
     <div className="sidebar">
         <div className="sidebarWrapper">
+            <button></button>
             <div className="sidebarMenu">
                 <h3 className="sidebarTitle">
                 Dashboard
