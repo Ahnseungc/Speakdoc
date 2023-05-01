@@ -1,0 +1,11 @@
+
+
+.Home {
+height: 5vh;
+width: 100%;
+font-size: 20px;
+background-color: blue;
+color: black;
+background-color: white;
+display: flex;
+justify-content: start;}

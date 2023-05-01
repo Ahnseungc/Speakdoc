@@ -1,12 +1,23 @@
 .container {
   display: flex;
+  justify-content: center;
+  height: 700px;
+  align-items: center;
+  transition: 0.5s ease-in;
+  
+}
+.Header {
+  display: flex;
+  transition: 0.5s ease-in;
 }
 
-.sidebar {
-  /* flex: 1; */
+
+
+/* .sidebar {
+  flex: 1;
   height: calc(100vh - 50px);
   position: sticky;
   background-color: rgb(240,239,239);
   top: 50px;
-}
+} */
 

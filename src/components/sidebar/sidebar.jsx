@@ -14,7 +14,7 @@ export default function sidebar({width=280}) {
     // const side = useRef();
 
     const menus = [
-        {name: "HOME", path: "/home"},
+        {name: "HOME", path: "/"},
         {name: "CAPTION", path: "/caption"},
         {name: "PDF", path: "/pdf"}
     ];
@@ -36,7 +36,6 @@ export default function sidebar({width=280}) {
                         >
                             <Sidebaritem 
                             menu={menu}
-                            isActive={pathName===menu.path ? true : false}
                             />
                         </Link>
                         )

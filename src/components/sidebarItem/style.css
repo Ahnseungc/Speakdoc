@@ -5,10 +5,12 @@
 }
 
 .sidebarListItem {
-    padding: 5px;
+    list-style: none;
+    padding: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     border-radius: 10px;
     color:black;
+    font-size: 40px;
 }
