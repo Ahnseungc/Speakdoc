@@ -1,6 +1,7 @@
 {
   "name": "capstone_ver2",
   "version": "0.1.0",
+  "homepage": "http://Ahnseungc.github.io/PDF_OCR_Caption/home",
   "proxy": "http://127.0.0.1:5000",
   "private": true,
   "dependencies": {
@@ -25,6 +26,8 @@
     "web-vitals": "2.1.4"
   },
   "scripts": {
+    "predoploy": "npm run build",
+    "deploy" : "gh-pages -d public",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "5.0.0"
   }
 }
