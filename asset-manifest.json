@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PDF_OCR_Caption/static/css/main.bb12c191.css",
+    "main.js": "/PDF_OCR_Caption/static/js/main.eaac84be.js",
+    "static/js/787.f587abbe.chunk.js": "/PDF_OCR_Caption/static/js/787.f587abbe.chunk.js",
+    "index.html": "/PDF_OCR_Caption/index.html",
+    "main.bb12c191.css.map": "/PDF_OCR_Caption/static/css/main.bb12c191.css.map",
+    "main.eaac84be.js.map": "/PDF_OCR_Caption/static/js/main.eaac84be.js.map",
+    "787.f587abbe.chunk.js.map": "/PDF_OCR_Caption/static/js/787.f587abbe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb12c191.css",
+    "static/js/main.eaac84be.js"
+  ]
+}
