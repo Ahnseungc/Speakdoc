@@ -1,7 +1,11 @@
-.sidebarListItem.active,
-.sidebarListItem:hover {
+.sidebarListItem p:hover {
     background-color: rgb(212,209,235);
-    transition: all ease 1s;
+    transition: all ease 0.5s;
+}
+.sidebarListItem p{
+    border-radius: 10%;
+    width: 180px;
+    text-align: center;
 }
 
 .sidebarListItem {
@@ -13,4 +17,22 @@
     border-radius: 10px;
     color:black;
     font-size: 40px;
+    animation: fadeIn 1s ease-in-out;
 }
+/* .sidebarListItem:not(:last-child) {
+    border-bottom: 1px solid black;
+} */
+
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 3;
+        transform: none;
+    }
+}
+
+

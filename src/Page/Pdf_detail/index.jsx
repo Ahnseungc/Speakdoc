@@ -6,14 +6,18 @@ import html2canvas from 'html2canvas';
 import axios from "axios";
 import styled from 'styled-components';
 import { getSpeech } from '../../utils/getSpeech';
+import { useLocation } from 'react-router-dom';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faArrowLeft, faArrowRight, faPager} from "@fortawesome/free-solid-svg-icons";
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
+
 const Container = styled.div`
-    width: 280px;
-    height: 700px;
+    width: 350px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,10 +25,13 @@ const Container = styled.div`
 
 
 export default function PdfDetail() {
+
+
+
+  let location = useLocation();
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [translation,setTranslation] = useState([]);
-      
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
     console.log(numPages);
@@ -59,19 +66,19 @@ export default function PdfDetail() {
           getSpeech(translation);
         },[translation])
      
-
+        
   return (
         <Container>
-        <div id='pdf_main' className='pdf_main' style={{width: '280px', height: '200px', overflow: 'auto', display:"flex",
+        <div id='pdf_main' className='pdf_main' style={{width: '350px', height: '200px', overflow: 'auto', display:"flex",
         justifyContent: "center"
       }} >
       <Document
-        file="pdf/test.pdf"
+        file={"pdf/test"+location.state+".pdf"}
         onLoadSuccess={onDocumentLoadSuccess}        
         >
         <Page 
         height={300}
-        width={280}
+        width={350}
         pageNumber={pageNumber} 
             renderTextLayer={false}
             onClick={onCapture}
@@ -83,7 +90,7 @@ export default function PdfDetail() {
             setPageNumber(pageNumber-1):null}
             style={{}}
             >
-        before
+            <FontAwesomeIcon icon={faArrowLeft} />
         </span>
         <span
         style={{marginLeft:"20px"}}
@@ -92,7 +99,7 @@ export default function PdfDetail() {
         <span 
         style={{marginLeft:"20px"}}
         onClick={()=> pageNumber < numPages ? setPageNumber(pageNumber+1):null}>
-        next
+        <FontAwesomeIcon icon={faArrowRight}/>
         </span>
       </p>
     </Container>

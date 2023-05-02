@@ -5,19 +5,25 @@ import {DeleteOutline} from "@mui/icons-material";
 import {Link} from "react-router-dom";
 import {useState} from "react";
 import {Rows} from "../../Data/Pdfdata";
+import PdfDetail from "../Pdf_detail";
+import { useNavigate } from 'react-router-dom';
 
 export default function PdfMain(){
 
+    const navigate = useNavigate();
+
     const columns =[
-        {field: 'id', headerName:"DATE", width: 70},
+        {field: 'id', headerName:"NUMBER", width: 70},
         {field: 'date', headerName:"DATE", width: 80},
         {field: 'name', headerName:"NAME", width: 100},
         {field: 'action', headerName:"Action", width:80,
             renderCell: (params)=>{
                 return(
                     <>
-                    <Link to={'/pdfdetail'}>
-                    <button className="userListEdit">+</button>
+                    <Link to={'/pdfdetail'} state={params.row.id}>
+                    <button className="userListEdit"
+                    
+                    >+</button>
                     </Link>
                     <DeleteOutline className="userListDelete"
                      onClick={()=> handleDelete(params.row.id)}

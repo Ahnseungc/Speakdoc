@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.css"
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -12,7 +14,9 @@ export default function Homebtn () {
             {textDecoration:'none'}
         }>
         <div className="Home">
-            Home
+            <p>
+                <FontAwesomeIcon icon={faHouse} />
+            </p>
         </div>
         </Link>
     )

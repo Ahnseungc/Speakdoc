@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css"
 import Item from "../../components/sidebarItem"
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 
 
 
@@ -30,6 +30,7 @@ return(
                     menu={select}
                     isActive={pathname===select.path ? true : false}                    
                     />
+                    
                 </Link>        
                 )
             })

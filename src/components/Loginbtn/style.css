@@ -7,4 +7,19 @@
     display: flex;
     justify-content: end;
     font-size: 20px;
+    align-items: center;
+    margin : 20px 20px 0 0;
 }
+
+.Login p{
+    border-radius: 20%;
+    font-size: 30px;
+}
+
+
+.Login p:hover{
+    font-size: 35px;
+    transition: all ease 0.5s;
+}
+
+

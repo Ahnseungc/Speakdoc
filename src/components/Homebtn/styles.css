@@ -8,4 +8,18 @@ background-color: blue;
 color: black;
 background-color: white;
 display: flex;
-justify-content: start;}
+justify-content: start;
+align-items: center;
+margin : 20px 0 0 20px;
+}
+
+
+.Home p{
+    font-size: 30px;
+    border-radius: 20%;
+}
+
+.Home p:hover{
+    font-size: 35px;
+    transition: all ease 0.5s;
+}

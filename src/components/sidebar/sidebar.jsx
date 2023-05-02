@@ -16,7 +16,7 @@ export default function sidebar({width=280}) {
     const menus = [
         {name: "HOME", path: "/"},
         {name: "CAPTION", path: "/caption"},
-        {name: "PDF", path: "/pdf"}
+        {name: "PDF", path: "/pdf"},
     ];
 
     return ( 

@@ -5,7 +5,7 @@ import "./style.css"
 export default function sidebaritem({menu}) {
     return  (
         <li className="sidebarListItem">
-            {menu.name}
+            <p>{menu.name}</p>
         </li>
     )
     

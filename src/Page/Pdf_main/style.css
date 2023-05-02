@@ -6,7 +6,17 @@
     color: white;
     cursor: pointer;
     margin-right: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+    
+}
 
-
-
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 3;
+        transform: none;
+    }
 }
