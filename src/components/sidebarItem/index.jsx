@@ -2,11 +2,14 @@ import React from "react";
 import "./style.css"
 
 
-export default function sidebaritem({menu}) {
+export default function sidebaritem({img}) {
+    
     return  (
+
         <li className="sidebarListItem">
-            <p>{menu.name}</p>
+            <img src={`data:image/jpeg;base64,${img}`} alt="/" />
         </li>
+                
     )
     
 }

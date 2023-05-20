@@ -8,6 +8,8 @@ import {Rows} from "../../Data/Pdfdata";
 import PdfDetail from "../Pdf_detail";
 import { useNavigate } from 'react-router-dom';
 
+
+
 export default function PdfMain(){
 
     const navigate = useNavigate();
@@ -39,7 +41,9 @@ export default function PdfMain(){
     }
 
     return(
-        <div className="userList">
+        <div className="userList"
+        style={{color:"white"}}
+        >
             <DataGrid
             rows={data}
             disableSelectionOnClick

@@ -1,13 +1,22 @@
+.App {
+  width: 390px;
+  height: 700px;
+}
+
 .container {
   display: flex;
   justify-content: center;
   height: 700px;
   align-items: center;
   transition: 0.5s ease-in;
+  background-color: rgba(35, 32, 32, 0.861);
+  color: white;
   
 }
 .Header {
+  background-color: rgba(35, 32, 32, 0.861);
   display: flex;
+  justify-content: right;
   transition: 0.5s ease-in;
 }
 

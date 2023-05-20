@@ -4,13 +4,12 @@
 height: 5vh;
 width: 100%;
 font-size: 20px;
-background-color: blue;
-color: black;
-background-color: white;
+color: rgb(2, 94, 224);
 display: flex;
-justify-content: start;
+justify-content: center;
 align-items: center;
-margin : 20px 0 0 20px;
+margin : 30px 120px 20px 20px;
+/* border: 1px solid black; */
 }
 
 
@@ -20,6 +19,6 @@ margin : 20px 0 0 20px;
 }
 
 .Home p:hover{
-    font-size: 35px;
+    color: white;
     transition: all ease 0.5s;
 }

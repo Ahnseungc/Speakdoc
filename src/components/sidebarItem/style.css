@@ -1,21 +1,24 @@
-.sidebarListItem p:hover {
-    background-color: rgb(212,209,235);
+.sidebarListItem img:hover {
+    width: 220px;
+    height: 170px;
     transition: all ease 0.5s;
 }
-.sidebarListItem p{
+.sidebarListItem img{
     border-radius: 10%;
-    width: 180px;
+    width: 200px;
+    height: 150px;
     text-align: center;
 }
 
 .sidebarListItem {
+    color: white;
     list-style: none;
     padding: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     border-radius: 10px;
-    color:black;
+    /* color:black; */
     font-size: 40px;
     animation: fadeIn 1s ease-in-out;
 }
