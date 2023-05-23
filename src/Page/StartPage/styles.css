@@ -1,0 +1,37 @@
+.main-img-section {
+    background-image: url("image3.png");
+    background-size: cover;
+    width: 1024px;
+    height: 700px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-family: "Dovemayo_gothic";
+}
+
+.main-img-section h1 {
+    font-size: 45px;
+    margin-top: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+
+.main-img-section .active1{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: 10px;
+    left: 50px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.124);
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    z-index: 99;
+  }
+  .main-img-section .speech  {
+    opacity: 0;
+  }

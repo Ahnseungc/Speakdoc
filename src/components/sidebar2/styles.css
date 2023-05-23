@@ -1,11 +1,12 @@
   .sidebar {
-    background-color: rgba(35, 32, 32, 0.861);
+    background-color: rgb(204, 178, 241);
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     transition: 0.4s ease;
     height: 100%;
+    opacity: 0.8;
     z-index: 99;
   }
 
@@ -14,9 +15,9 @@
     border : none;    
     position: relative;
     font-size: 30px;
-    left: 330px; 
-    color: rgb(2, 94, 224);
-    top: 33px;
+    left: 410px; 
+    color: rgb(173, 141, 214);
+    top: 38px;
     width: 40px;
     height: 40px;
     z-index: 99;
@@ -32,6 +33,7 @@
     padding: 40px 40px 0 20px;
     position: relative;
     width: 100%;
+    overflow-y: auto;
   }
   .active{
     opacity: 0;

@@ -20,6 +20,7 @@ export const getSpeech = (text) => {
         const lang = "ko-KR";
         const utterThis = new SpeechSynthesisUtterance(txt);
 
+
         utterThis.lang = lang;
 
         const kor_voice = voices.find(

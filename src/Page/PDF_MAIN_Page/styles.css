@@ -1,0 +1,39 @@
+.Main {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "SUITE-Regular";
+}
+
+
+
+    
+    .Main{
+        width: 1024px;
+        height: 700px;
+    }
+    .Header {
+        /* background-color: rgba(35, 32, 32, 0.861);  */
+        height: 15%;
+        background-color: white;
+        display: flex;
+        justify-content: right;
+        transition: 0.5s ease-in;
+      }
+
+
+      .Main .active1{    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        top: 460px;
+        left: 400px;
+        float: right;
+        background-color: rgba(0, 0, 0, 0.124);
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+        z-index: 99;
+      }     
+    

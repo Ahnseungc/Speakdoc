@@ -1,16 +1,17 @@
 .sidebarListItem img:hover {
-    width: 220px;
+    width: 290px;
     height: 170px;
     transition: all ease 0.5s;
 }
 .sidebarListItem img{
     border-radius: 10%;
-    width: 200px;
+    width: 270px;
     height: 150px;
     text-align: center;
 }
 
 .sidebarListItem {
+    /* overflow-y: scroll; */
     color: white;
     list-style: none;
     padding: 20px;

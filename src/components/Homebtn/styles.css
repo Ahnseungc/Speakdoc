@@ -2,13 +2,13 @@
 
 .Home {
 height: 5vh;
-width: 100%;
+width: 10%;
 font-size: 20px;
-color: rgb(2, 94, 224);
+color: rgb(173, 141, 214);
 display: flex;
 justify-content: center;
 align-items: center;
-margin : 30px 120px 20px 20px;
+margin : 30px 50px 0 20px;
 /* border: 1px solid black; */
 }
 
@@ -19,6 +19,6 @@ margin : 30px 120px 20px 20px;
 }
 
 .Home p:hover{
-    color: white;
+    font-size: 34px;
     transition: all ease 0.5s;
 }

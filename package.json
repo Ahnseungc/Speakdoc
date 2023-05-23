@@ -2,7 +2,6 @@
   "name": "capstone_ver2",
   "version": "0.1.0",
   "homepage": "http://Ahnseungc.github.io/PDF_OCR_Caption",
-  "proxy": "http://127.0.0.1:5000",
   "private": true,
   "dependencies": {
     "@emotion/react": "11.10.8",
@@ -25,6 +24,7 @@
     "react-redux": "8.0.5",
     "react-router-dom": "6.11.0",
     "react-scripts": "5.0.1",
+    "react-simple-typewriter": "5.0.1",
     "styled-components": "5.3.9",
     "swiper": "9.3.2",
     "web-vitals": "2.1.4"

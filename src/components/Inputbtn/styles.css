@@ -1,0 +1,26 @@
+
+
+.Input {
+    height: 5vh;
+    width: 10%;
+    font-size: 20px;
+    color: rgb(173, 141, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin : 30px 0 0 0;
+    /* border: 1px solid black; */
+    }
+    
+    
+    .Input p{
+        font-size: 30px;
+        border-radius: 20%;
+    }
+    
+    .Input p:hover{
+        font-size: 38px;
+        transition: all ease 0.2s;
+    }
+
+    

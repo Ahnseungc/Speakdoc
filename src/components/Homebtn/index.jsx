@@ -10,7 +10,7 @@ export default function Homebtn () {
 
 
     return(
-        <Link to={"/"} style={
+        <Link to={"/pdf"} style={
             {textDecoration:'none'}
         }>
         <div className="Home">

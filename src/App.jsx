@@ -1,39 +1,52 @@
 import './App.css';
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
-import Caption from './Page/caption';
-import PdfMain from './Page/Pdf_main';
+// import StartPage from './Page/StartPage';
+
 import PdfDetail from "./Page/Pdf_detail";
 import Homebtn from './components/Homebtn';
-import Sidebar2 from './components/sidebar2';
-import { useSelector } from 'react-redux';
+import Sidebar from './components/sidebar2';
+import PDFMAIN2 from './Page/PDF_MAIN_Page';
+import Inputbtn from './components/Inputbtn';
+// import { useSelector } from 'react-redux';
+import StartPage from './Page/StartPage';
+import { Link } from 'react-router-dom';
 
 function App() {
+  
   
     
   return (
     <div className="App">
       <div className='Header'>
-        <Homebtn />        
-      </div>     
-      <div className='container'>
-      <Sidebar2>최근 목록</Sidebar2>
+      <Inputbtn/>
+      <Homebtn />      
+      </div> 
+       <hr/>      
+      <div className='container'>                 
+      <Sidebar><h1>최근 목록</h1></Sidebar>
+      
           <Routes>
-            <Route path='/' 
-            element={<PdfMain/>}/>
-            <Route path='/caption'
-            element={<Caption/>}/>
+            <Route
+            path='/'
+            element={<StartPage/>}
+            >
+              
+            </Route>
             <Route path='/pdf'
-            element={<PdfMain/>}
+            element={<PDFMAIN2/>}
             > 
             </Route>
             <Route path='/pdfdetail'
             element={<PdfDetail/>}
             > 
             </Route>
-          </Routes>        
+
+          </Routes>   
+
+           
       </div>
-      
+     
     </div>
   );
 }

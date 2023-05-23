@@ -5,19 +5,25 @@ import { faAlignJustify} from "@fortawesome/free-solid-svg-icons";
 import Sidebaritem from "../sidebarItem";
 import { useSelector } from "react-redux";
 
-const Sidebar = ({ width=280,children}) => {
+const Sidebar = ({ width=360,children}) => {
   const [isOpen, setOpen] = useState(false);
   let [xPosition, setXposition] = useState(width);
   const [classNames, setClassNames] = useState('button');
   const side = useRef();
   const {img} = useSelector(state=>state);
+  const {text} = useSelector(state=>state);
   const [imglist,setImglist] =useState([img]);
+  const [textlist,setTextlist] =useState([text]);
 
   useEffect(()=>{
     let copy = [...imglist];
+    let copy2 = [...textlist]
     copy.push(img);
+    copy2.push(text);
     setImglist(copy);
+    setTextlist(text);
     console.log(imglist);
+    console.log(textlist);
   },[img])
 
   // button 클릭 시 토글 
@@ -68,15 +74,12 @@ const Sidebar = ({ width=280,children}) => {
           </button>
         <div className="content">
           {children}
-          {
-            
-              imglist.map((img)=>{
+          {            
+              imglist.map((img,index)=>{
                 return(
-                  img!=="" ? <Sidebaritem img={img}/>  : null        
-                  
+                  img!=="" ? <Sidebaritem img={img} text={text[index]}/>  : null                          
                 )
-              })
-            
+              })            
           }          
           
         </div> 
