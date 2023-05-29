@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/document',
+    '/process_image',
     createProxyMiddleware({
-      target: 'https://21cf-112-167-62-38.ngrok-free.app',
+      target: 'https://c620-1-212-189-109.ngrok-free.app',
       changeOrigin: true,
     })
   );

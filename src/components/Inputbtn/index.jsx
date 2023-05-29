@@ -22,18 +22,19 @@ const Inputbtn = ()=>{
             }
             const file = e.target.files[0];
             const name = JSON.stringify(e.target.files[0].name);
-            const date = JSON.stringify(e.target.files[0].lastModifiedDate).substr(1,10);        
+            // const date = JSON.stringify(e.target.files[0].lastModifiedDate).substr(1,10);        
             dispatch({type:"UPLOAD",name:name,date:date})
 
             const formData = new FormData();
             formData.append('file',file)
+            formData.append("memberId",1);
             // for (var key of formData.values()) {
             //     console.log(key);              
             //   }            
             axios({
                 url: "/document",
                 method:"POST",
-                body: formData,
+                data:formData,
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }
@@ -43,8 +44,6 @@ const Inputbtn = ()=>{
             }).catch(err=>{
                 console.error(err);
             })
-
-
     },[])
     
 

@@ -1,5 +1,5 @@
 import Homebtn from '../../components/Homebtn';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Document, Page } from 'react-pdf';
 import { pdfjs } from 'react-pdf';
 import html2canvas from 'html2canvas';
@@ -10,13 +10,13 @@ import { useLocation } from 'react-router-dom';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faArrowLeft, faArrowRight, faPager} from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from 'react-redux';
-import Sidebar from '../../components/sidebar2';
+import dog from '../../speekdoc.png';
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Container = styled.div`
-    width: 1024px;
+    width: 100%;
     height: 700px;
     display: flex;
     flex-direction: column;
@@ -28,17 +28,26 @@ const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 250px;
-        height: 250px;
-        position: relative;
-        top:5px;
-        left: 730px; 
+        width: 150px;
+        top: 530px;
+        left: 900px;
+        position: fixed;                
         float: right;
-        background-color: rgba(0, 0, 0, 0.124);
+        background-color: white;
         opacity: 1;
         transition: 0.5s ease-in-out;
-        z-index: 99;
+        z-index: 99;        
+      }
+      & .active1 img{
+        width: 150px;
+        height: 150px;
       }     
+      & .active1 img:hover{
+        transition: 0.5s ease-in-out;        
+        width: 170px;
+        height: 170px;
+      }
+      
 
     
 `;
@@ -46,13 +55,13 @@ const Container = styled.div`
 
 export default function PdfDetail(props) {
 
-
+  const [clickcount, setClickcount] = useState(0);
   const dispatch = useDispatch();
   let location = useLocation();
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [translation,setTranslation] = useState([]);
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [image,setImage]= useState([]);
   
   const onDocumentLoadSuccess = ({ numPages }) => {
     setNumPages(numPages);
@@ -66,17 +75,18 @@ export default function PdfDetail(props) {
         try{          
           const res = await axios.post("/process_image",
           {"image" : data,
-           "pageIndex" : pageNumber,
+           "pageIndex" : pageNumber-1,
            "documentId" : 1
           });
-          console.log(res.text);
-          setTranslation(res.data);          
+          console.log(res.data.text);
+          setTranslation(res.data.text);
+          setImage(res.data.picture);
         }
         catch(error) {
           console.log(error);
         }
       }
-       
+      
         const onCapture = () =>{          
           console.log('onCapture');                         
           html2canvas(document.getElementById('pdf_main')).then(canvas=>{
@@ -84,14 +94,27 @@ export default function PdfDetail(props) {
           const decodimg=imgBase64.split(',')[1];
           postData(decodimg); 
           dispatch({type:"SAVE",img:decodimg}); 
-          // setImg(decodimg);
-          // console.log(decodimg);
+          setClickcount(clickcount+1);          
           })
                     
         }
         useEffect(()=>{
           console.log(translation);
-          getSpeech(translation);
+          console.log(clickcount)
+          if(clickcount===1){
+            getSpeech(translation);
+          }
+          else{
+            setClickcount(0);
+            if(image.length!==0){
+              getSpeech(`이미지는 ${image.length}개 있습니다`);
+              getSpeech(image);
+            }
+            else{
+              getSpeech("이미지가 없습니다.")
+            }
+          }
+          
         },[translation])
         
 
@@ -99,11 +122,11 @@ export default function PdfDetail(props) {
     
         <Container>
             
-        <div id='pdf_main' className='pdf_main' style={{width: '1024px', height: '400px', overflow: 'auto', display:"flex",
+        <div id='pdf_main' className='pdf_main' style={{width: '100%', height: '600px', overflow: 'auto', display:"flex",
         justifyContent: "center"
       }} >
         <Document
-        file={"Pdf/test"+location.state+".pdf"}
+        file={"Pdf/test"+12+".pdf"}
         onLoadSuccess={onDocumentLoadSuccess}                
         >
 
@@ -117,28 +140,30 @@ export default function PdfDetail(props) {
       </Document>
       </div>
       
+      <div className="footer">
       <div className="active1">                
-                    개사진                 
-            </div>
-      <p className='pageNumber' style={{display: "flex", justifyContent:"center", color:"rgb(173, 141, 214)"}}>      	
+        <img src={dog} alt="" />               
+      </div>
+      <p className='pageNumber' style={{display: "flex", justifyContent:"center", color:"rgb(173, 141, 214)", marginBottom:"100px"}}>      	
         <span onClick={()=> pageNumber > 1 ? 
             setPageNumber(pageNumber-1):null}
-            style={{fontSize:"30px"}}
+            style={{fontSize:"50px"}}
             >
             <FontAwesomeIcon icon={faArrowLeft} />
         </span>
         <span
-        style={{ marginLeft:"20px",color:"rgb(173, 141, 214)",fontSize:"30px"
+        style={{ marginLeft:"20px",color:"rgb(173, 141, 214)",fontSize:"50px"
         }}
         >
          {pageNumber} of {numPages}</span>
        	
         <span
-        style={{marginLeft:"20px",color:"rgb(173, 141, 214)",fontSize:"30px"}}
+        style={{marginLeft:"20px",color:"rgb(173, 141, 214)",fontSize:"50px"}}
         onClick={()=> pageNumber < numPages ? setPageNumber(pageNumber+1):null}>
         <FontAwesomeIcon icon={faArrowRight}/>
         </span>
       </p>
+      </div>
       
       
 

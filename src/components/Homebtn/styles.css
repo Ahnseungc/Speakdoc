@@ -1,5 +1,3 @@
-
-
 .Home {
 height: 5vh;
 width: 10%;
@@ -8,7 +6,7 @@ color: rgb(173, 141, 214);
 display: flex;
 justify-content: center;
 align-items: center;
-margin : 30px 50px 0 20px;
+margin : 30px 50px 0 70px;
 /* border: 1px solid black; */
 }
 

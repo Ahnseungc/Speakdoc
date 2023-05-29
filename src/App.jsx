@@ -13,14 +13,12 @@ import StartPage from './Page/StartPage';
 import { Link } from 'react-router-dom';
 
 function App() {
-  
-  
-    
+      
   return (
     <div className="App">
       <div className='Header'>
       <Inputbtn/>
-      <Homebtn />      
+      <Homebtn />
       </div> 
        <hr/>      
       <div className='container'>                 

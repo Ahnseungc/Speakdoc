@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import img from "../../image/image1.png"
+
 import axios from "axios";
 
 const Container =styled.a`
@@ -10,25 +10,32 @@ const Container =styled.a`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
-    height: 150px;
+    width: 400px;
+    height: 300px;
     text-decoration: none;
+
+    & .image{
+        width: 300px;
+    height: 260px;
+    }
 `
 const ImageWrapper = styled.div`
-    width: 160px;
-    height: 130px;
+    width: 280px;
+    height: 260px;
     /* position: relative; */
 `
-const Image = styled.img`
-    width: 160px;
-    height: 130px;
-    /* position: absolute; */
-`
+// const Image = styled.img.attrs({
+//     src: `${test1}`
+// })`
+    // width: 300px;
+    // height: 260px;
+    
 
 const Content = styled.div`
     /* background-color: rgba(0,0,0,0.5); */
     color: black;
-    width: 160px;
+    width: 300px;
+    font-size: 30px;
     /* height: 130px; */
     /* position: absolute; */
     border: none;
@@ -51,21 +58,24 @@ const PDFMAIN2 =({image,content,pdfname,id})=>{
 
     // },[])
     
+    
 
 
-
-    const imgsrc= image;
+    console.log("id", id);
     return(
         <Container>
         <ImageWrapper onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
         <Link to={'/pdfdetail'} state={id}>
-        <Image src={img}></Image>
+        <img className="image"
+        src={"image/image"+id+".png"}
+        alt="/"
+        ></img>
         </Link>            
             <Content>{content}</Content>
-            <h3 style={{color:'black', fontWeight:"bold",margin:"0px"}}>
+            <h1 style={{color:'black', fontWeight:"bold",margin:"0px"}}>
                 {pdfname}
                 
-            </h3>
+            </h1>
             
         </ImageWrapper>
         </Container>

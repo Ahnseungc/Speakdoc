@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import "./styles.css"
 import PDFmaincompoent from "../../components/Pdf_main"
 import { useSelector } from "react-redux";
+import dog from "../../speekdoc.png"
 import { Link } from "react-router-dom";
 
 const PDFMAINPAGE =() =>{
@@ -28,24 +29,27 @@ const PDFMAINPAGE =() =>{
         let copy = [...pdflist];
         copy.push({id:1,date:date,name:name})
         setPdflist(copy);
+        i++;
     },[name])
     console.log(pdflist);
     
-    
-
+ var i=0;
     return(
         <div className="Main">
             {
             pdflist.map((e)=>{
                     console.log(e);
+                    console.log(i);
+                    // i++;
                     return(
-                        <PDFmaincompoent image={"image/image1.png"}content={e.date}pdfname={e.name} id={e.id}/>        
-                        )
-                    
+                        <PDFmaincompoent image={"image/image"+{i}+".png"}content={e.date}pdfname={e.name} id={i=i+1}/>        
+                        
+                        )         
+                                   
                 })            
             }
              <div className="active1">                
-                    개사진                 
+                <img src={dog} alt="" />                 
             </div>       
         </div>
     )

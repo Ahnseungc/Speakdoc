@@ -8,8 +8,8 @@ export const saveText = (name,date)=>({type:"UPLOAD", name:{name},date:{date}})
 const initState ={
     img: '',
     text: '',
-    name: '',
-    date: '',
+    name: '인공지능과 컴퓨터 시각',
+    date: '23.05.20',
 }
 
 export const reducer = (state=initState, action)=>{

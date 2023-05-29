@@ -1,6 +1,4 @@
 
-
-
 hr{
   background: rgb(173, 141, 214);
   height: 1px;
@@ -19,7 +17,7 @@ hr{
     height: 100%;
   }
   .Header{
-    width: 1024px;
+    width: 100%;
   }
 
 
