@@ -1,5 +1,5 @@
 # Speackdoc
-## 캡스톤 출품작
+## 캡스톤 입선작
 <img src="https://github.com/Ahnseungc/PDF_OCR_Caption/assets/94547692/def0b3a8-4e45-415c-b6c8-f3da90397e72" width="100%"/>
 <img src="https://github.com/Ahnseungc/PDF_OCR_Caption/assets/94547692/5c86eadf-422c-43db-97f2-0f4566a17ffa" width="100%"/>
 
