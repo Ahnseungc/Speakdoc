@@ -39,7 +39,17 @@
 
 # 🤝 Colaborators
 
+정유빈 AI
+강민제 AI
+김민지 BACK
+안승찬 Front
+
+<br/>
+<br/>
+
+# 시현영상
 
 
+https://github.com/Ahnseungc/PDF_OCR_Caption/assets/94547692/ab19dc46-22ef-474e-bdd5-564e18c7e63a
 
 
