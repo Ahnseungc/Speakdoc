@@ -39,9 +39,9 @@
 
 # 🤝 Colaborators
 
-정유빈 AI
-강민제 AI
-김민지 BACK
+정유빈 AI<br/>
+강민제 AI<br/>
+김민지 BACK<br/>
 안승찬 Front
 
 <br/>
