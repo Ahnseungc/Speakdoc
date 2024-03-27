@@ -3,6 +3,8 @@
 <img width="600" alt="스크린샷 2024-03-27 오후 8 25 44" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/53956b2d-3c87-4f1e-94cd-5d60778d18e1">
 
 
+<br/>
+<br/>
 
 **🔎** 목적 및 필요성
 
