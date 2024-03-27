@@ -7,7 +7,6 @@
 <br/>
 
 **🔎** 목적 및 필요성
-
 <img width="692" alt="스크린샷 2024-03-27 오후 8 27 11" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/c17d564b-a81e-4fc9-aff0-d5b6a3eccc5c">
 
 <img width="692" alt="스크린샷 2024-03-27 오후 8 27 27" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/15a13f3b-f4aa-4a94-9496-b65a87913453">
@@ -18,13 +17,11 @@
 <br/>
 <br/>
 **📖 상세 내용**
-
 유튜브에서 시각 장애 학생의 영상을 우연히 보게 된후 아직 사회의 여러 부분에서 시각 장애인을 위한 개선해야 할 점이 많다는 사실을 알게 되었습니다. 특히, 시각 장애 학생들을 위한 대체 자료 제작에는 많은 시간과 비용이 들어간다는 것을 확인하였습니다. 그래서 **Speakdoc**를 통해 음성안내 웹 어플리케이션을 만들면 어떨까? 라는 생각으로 시작 하였습니다.
 
 <br/>
 <br/>
 **📌 주요 기능**
-
 <img width="692" alt="스크린샷 2024-03-27 오후 8 28 01" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/3ee89cd7-4658-464d-9396-66ee8722a0e5">
 
 
