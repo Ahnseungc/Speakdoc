@@ -7,11 +7,11 @@
 **🔎** 목적 및 필요성
 
 <div style={textAlign:center}>
-<img width="600" alt="스크린샷 2024-03-27 오후 8 27 11" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/c17d564b-a81e-4fc9-aff0-d5b6a3eccc5c">
+<img width="692" alt="스크린샷 2024-03-27 오후 8 27 11" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/c17d564b-a81e-4fc9-aff0-d5b6a3eccc5c">
 
-<img width="600" alt="스크린샷 2024-03-27 오후 8 27 27" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/15a13f3b-f4aa-4a94-9496-b65a87913453">
+<img width="692" alt="스크린샷 2024-03-27 오후 8 27 27" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/15a13f3b-f4aa-4a94-9496-b65a87913453">
 
-<img width="600" alt="스크린샷 2024-03-27 오후 8 27 40" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/0ea9d93d-aa34-4c81-bf36-25b12a888452">
+<img width="692" alt="스크린샷 2024-03-27 오후 8 27 40" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/0ea9d93d-aa34-4c81-bf36-25b12a888452">
 </div>
 
 <br/>
@@ -41,7 +41,7 @@ Redux를 통해 반환된 값을 Store에 저장합니다.
 <br/>
 <br/>
 
-<img width="607" alt="스크린샷 2024-03-27 오후 8 28 36" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/6c8c10cb-b350-4526-8618-1d8dc264e6ef">
+<img width="692" alt="스크린샷 2024-03-27 오후 8 28 36" src="https://github.com/Ahnseungc/Speakdoc/assets/94547692/6c8c10cb-b350-4526-8618-1d8dc264e6ef">
 <br/>
 <br/>
 
@@ -62,4 +62,3 @@ Back | Spring, Flask
 
 AI | EasyOcr, Captioning
 
-GIt | https://github.com/Ahnseungc/Speakdoc
